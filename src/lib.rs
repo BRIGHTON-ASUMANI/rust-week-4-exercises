@@ -80,7 +80,8 @@ impl LegacyTransactionBuilder {
 
     pub fn version(mut self, version: i32) -> Self {
         // TODO: Set the transaction version
-        
+        self.version = version;
+        self
     }
 
     pub fn add_input(mut self, input: TxInput) -> Self {
