@@ -52,15 +52,15 @@ fn test_builder_method_chaining() {
     assert_eq!(builder.lock_time, 500_000);
 }
 
-// #[test]
-// fn test_builder_build() {
-//     let tx = LegacyTransactionBuilder::default().version(1).build();
+#[test]
+fn test_builder_build() {
+    let tx = LegacyTransactionBuilder::default().version(1).build();
 
-//     assert_eq!(tx.version, 1);
-//     assert!(tx.inputs.is_empty());
-//     assert!(tx.outputs.is_empty());
-//     assert_eq!(tx.lock_time, 0);
-// }
+    assert_eq!(tx.version, 1);
+    assert!(tx.inputs.is_empty());
+    assert!(tx.outputs.is_empty());
+    assert_eq!(tx.lock_time, 0);
+}
 
 // #[test]
 // fn test_transaction_serialization() {
