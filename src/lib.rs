@@ -63,6 +63,12 @@ pub struct LegacyTransactionBuilder {
 impl Default for LegacyTransactionBuilder {
     fn default() -> Self {
         // TODO: Implement default values
+        Self {
+            version: 1,
+            inputs: vec![],
+            outputs: vec![],
+            lock_time: 0,
+        }
     }
 }
 
