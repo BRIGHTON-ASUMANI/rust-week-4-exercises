@@ -98,10 +98,18 @@ impl LegacyTransactionBuilder {
 
     pub fn lock_time(mut self, lock_time: u32) -> Self {
         // TODO: Set lock_time for transaction
+        self.lock_time = lock_time;
+        self
     }
 
     pub fn build(self) -> LegacyTransaction {
         // TODO: Build and return the final LegacyTransaction
+         LegacyTransaction {
+            version: self.version,
+            inputs: self.inputs,
+            outputs: self.outputs,
+            lock_time: self.lock_time,
+        }
     }
 }
 
