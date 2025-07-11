@@ -72,31 +72,33 @@ impl Default for LegacyTransactionBuilder {
     }
 }
 
-// impl LegacyTransactionBuilder {
-//     pub fn new() -> Self {
-//         // TODO: Initialize new builder by calling default
-//     }
+impl LegacyTransactionBuilder {
+    pub fn new() -> Self {
+        // TODO: Initialize new builder by calling default
+        Self::default()
+    }
 
-//     pub fn version(mut self, version: i32) -> Self {
-//         // TODO: Set the transaction version
-//     }
+    pub fn version(mut self, version: i32) -> Self {
+        // TODO: Set the transaction version
+        
+    }
 
-//     pub fn add_input(mut self, input: TxInput) -> Self {
-//         // TODO: Add input to the transaction
-//     }
+    pub fn add_input(mut self, input: TxInput) -> Self {
+        // TODO: Add input to the transaction
+    }
 
-//     pub fn add_output(mut self, output: TxOutput) -> Self {
-//         // TODO: Add output to the transaction
-//     }
+    pub fn add_output(mut self, output: TxOutput) -> Self {
+        // TODO: Add output to the transaction
+    }
 
-//     pub fn lock_time(mut self, lock_time: u32) -> Self {
-//         // TODO: Set lock_time for transaction
-//     }
+    pub fn lock_time(mut self, lock_time: u32) -> Self {
+        // TODO: Set lock_time for transaction
+    }
 
-//     pub fn build(self) -> LegacyTransaction {
-//         // TODO: Build and return the final LegacyTransaction
-//     }
-// }
+    pub fn build(self) -> LegacyTransaction {
+        // TODO: Build and return the final LegacyTransaction
+    }
+}
 
 // Transaction components
 #[derive(Debug, Clone)]
