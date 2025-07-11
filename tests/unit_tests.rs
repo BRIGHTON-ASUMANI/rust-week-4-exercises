@@ -62,34 +62,34 @@ fn test_builder_build() {
     assert_eq!(tx.lock_time, 0);
 }
 
-// #[test]
-// fn test_transaction_serialization() {
-//     let tx = LegacyTransaction {
-//         version: 1,
-//         inputs: Vec::new(),
-//         outputs: Vec::new(),
-//         lock_time: 0,
-//     };
+#[test]
+fn test_transaction_serialization() {
+    let tx = LegacyTransaction {
+        version: 1,
+        inputs: Vec::new(),
+        outputs: Vec::new(),
+        lock_time: 0,
+    };
 
-//     let serialized = tx.serialize();
-//     assert_eq!(serialized.len(), 8); // 4 bytes version + 4 bytes lock_time
-// }
+    let serialized = tx.serialize();
+    assert_eq!(serialized.len(), 8); // 4 bytes version + 4 bytes lock_time
+}
 
-// #[test]
-// fn test_transaction_decoding() {
-//     // Version (1) + inputs count (0) + outputs count (0) + lock_time (0)
-//     let data = [
-//         1, 0, 0, 0, // version (i32)
-//         0, 0, 0, 0, // inputs count (u32)
-//         0, 0, 0, 0, // outputs count (u32)
-//         0, 0, 0, 0, // lock_time (u32)
-//     ];
-//     let tx = LegacyTransaction::try_from(&data[..]).unwrap();
-//     assert_eq!(tx.version, 1);
-//     assert_eq!(tx.lock_time, 0);
-//     assert_eq!(tx.inputs.len(), 0);
-//     assert_eq!(tx.outputs.len(), 0);
-// }
+#[test]
+fn test_transaction_decoding() {
+    // Version (1) + inputs count (0) + outputs count (0) + lock_time (0)
+    let data = [
+        1, 0, 0, 0, // version (i32)
+        0, 0, 0, 0, // inputs count (u32)
+        0, 0, 0, 0, // outputs count (u32)
+        0, 0, 0, 0, // lock_time (u32)
+    ];
+    let tx = LegacyTransaction::try_from(&data[..]).unwrap();
+    assert_eq!(tx.version, 1);
+    assert_eq!(tx.lock_time, 0);
+    assert_eq!(tx.inputs.len(), 0);
+    assert_eq!(tx.outputs.len(), 0);
+}
 
 // #[test]
 // fn test_transaction_decoding_with_inputs() {
