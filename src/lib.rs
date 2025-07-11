@@ -36,34 +36,35 @@ pub trait BitcoinSerialize {
     }
 }
 
-// Legacy Bitcoin transaction
-// #[derive(Debug, Clone)]
-// pub struct LegacyTransaction {
-//     pub version: i32,
-//     pub inputs: Vec<TxInput>,
-//     pub outputs: Vec<TxOutput>,
-//     pub lock_time: u32,
-// }
+//Legacy Bitcoin transaction
+#[derive(Debug, Clone)]
+pub struct LegacyTransaction {
+    pub version: i32,
+    pub inputs: Vec<TxInput>,
+    pub outputs: Vec<TxOutput>,
+    pub lock_time: u32,
+}
 
-// impl LegacyTransaction {
-//     pub fn builder() -> LegacyTransactionBuilder {
-//         // TODO: Return a new builder for constructing a transaction
-//     }
-// }
+impl LegacyTransaction {
+    pub fn builder() -> LegacyTransactionBuilder {
+        // TODO: Return a new builder for constructing a transaction
+        LegacyTransactionBuilder::default()
+    }
+}
 
-// // Transaction builder
-// pub struct LegacyTransactionBuilder {
-//     pub version: i32,
-//     pub inputs: Vec<TxInput>,
-//     pub outputs: Vec<TxOutput>,
-//     pub lock_time: u32,
-// }
+// Transaction builder
+pub struct LegacyTransactionBuilder {
+    pub version: i32,
+    pub inputs: Vec<TxInput>,
+    pub outputs: Vec<TxOutput>,
+    pub lock_time: u32,
+}
 
-// impl Default for LegacyTransactionBuilder {
-//     fn default() -> Self {
-//         // TODO: Implement default values
-//     }
-// }
+impl Default for LegacyTransactionBuilder {
+    fn default() -> Self {
+        // TODO: Implement default values
+    }
+}
 
 // impl LegacyTransactionBuilder {
 //     pub fn new() -> Self {
@@ -91,25 +92,25 @@ pub trait BitcoinSerialize {
 //     }
 // }
 
-// // Transaction components
-// #[derive(Debug, Clone)]
-// pub struct TxInput {
-//     pub previous_output: OutPoint,
-//     pub script_sig: Vec<u8>,
-//     pub sequence: u32,
-// }
+// Transaction components
+#[derive(Debug, Clone)]
+pub struct TxInput {
+    pub previous_output: OutPoint,
+    pub script_sig: Vec<u8>,
+    pub sequence: u32,
+}
 
-// #[derive(Debug, Clone)]
-// pub struct TxOutput {
-//     pub value: u64, // in satoshis
-//     pub script_pubkey: Vec<u8>,
-// }
+#[derive(Debug, Clone)]
+pub struct TxOutput {
+    pub value: u64, // in satoshis
+    pub script_pubkey: Vec<u8>,
+}
 
-// #[derive(Debug, Clone)]
-// pub struct OutPoint {
-//     pub txid: [u8; 32],
-//     pub vout: u32,
-// }
+#[derive(Debug, Clone)]
+pub struct OutPoint {
+    pub txid: [u8; 32],
+    pub vout: u32,
+}
 
 // // Simple CLI argument parser
 // pub fn parse_cli_args(args: &[String]) -> Result<CliCommand, BitcoinError> {

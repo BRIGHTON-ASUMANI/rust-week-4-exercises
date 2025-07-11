@@ -7,15 +7,15 @@ fn test_point_creation() {
     assert_eq!(point.y, 20);
 }
 
-// #[test]
-// fn test_builder_default() {
-//     let builder = LegacyTransactionBuilder::default();
+#[test]
+fn test_builder_default() {
+    let builder = LegacyTransactionBuilder::default();
 
-//     assert_eq!(builder.version, 1);
-//     assert!(builder.inputs.is_empty());
-//     assert!(builder.outputs.is_empty());
-//     assert_eq!(builder.lock_time, 0);
-// }
+    assert_eq!(builder.version, 1);
+    assert!(builder.inputs.is_empty());
+    assert!(builder.outputs.is_empty());
+    assert_eq!(builder.lock_time, 0);
+}
 
 // #[test]
 // fn test_builder_new_uses_default() {
