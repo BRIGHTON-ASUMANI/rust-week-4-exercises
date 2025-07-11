@@ -17,16 +17,16 @@ fn test_builder_default() {
     assert_eq!(builder.lock_time, 0);
 }
 
-// #[test]
-// fn test_builder_new_uses_default() {
-//     let default_builder = LegacyTransactionBuilder::default();
-//     let new_builder = LegacyTransactionBuilder::new();
+#[test]
+fn test_builder_new_uses_default() {
+    let default_builder = LegacyTransactionBuilder::default();
+    let new_builder = LegacyTransactionBuilder::new();
 
-//     assert_eq!(default_builder.version, new_builder.version);
-//     assert_eq!(default_builder.inputs.len(), new_builder.inputs.len());
-//     assert_eq!(default_builder.outputs.len(), new_builder.outputs.len());
-//     assert_eq!(default_builder.lock_time, new_builder.lock_time);
-// }
+    assert_eq!(default_builder.version, new_builder.version);
+    assert_eq!(default_builder.inputs.len(), new_builder.inputs.len());
+    assert_eq!(default_builder.outputs.len(), new_builder.outputs.len());
+    assert_eq!(default_builder.lock_time, new_builder.lock_time);
+}
 
 // #[test]
 // fn test_builder_method_chaining() {
