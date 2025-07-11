@@ -92,7 +92,7 @@ impl LegacyTransactionBuilder {
 
     pub fn add_output(mut self, output: TxOutput) -> Self {
         // TODO: Add output to the transaction
-         self.outputs.push(output);
+        self.outputs.push(output);
         self
     }
 
@@ -104,7 +104,7 @@ impl LegacyTransactionBuilder {
 
     pub fn build(self) -> LegacyTransaction {
         // TODO: Build and return the final LegacyTransaction
-         LegacyTransaction {
+        LegacyTransaction {
             version: self.version,
             inputs: self.inputs,
             outputs: self.outputs,
