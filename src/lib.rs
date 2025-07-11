@@ -28,14 +28,15 @@ impl<T> Point<T> {
     }
 }
 
-// // Custom serialization for Bitcoin transaction
-// pub trait BitcoinSerialize {
-//     fn serialize(&self) -> Vec<u8> {
-//         // TODO: Implement serialization to bytes
-//     }
-// }
+// Custom serialization for Bitcoin transaction
+pub trait BitcoinSerialize {
+    fn serialize(&self) -> Vec<u8> {
+        // TODO: Implement serialization to bytes
+        Vec::new()
+    }
+}
 
-// // Legacy Bitcoin transaction
+// Legacy Bitcoin transaction
 // #[derive(Debug, Clone)]
 // pub struct LegacyTransaction {
 //     pub version: i32,
